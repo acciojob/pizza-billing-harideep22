@@ -17,11 +17,11 @@ public class Pizza {
         this.isVeg = isVeg;
         if(isVeg==true) {
             this.price = 300;
-            this.bill += "Base Price Of The Pizza: 300";
+            this.bill = "Base Price Of The Pizza: 300";
         }
         else{
             this.price= 400;
-            this.bill+="Base Price Of The Pizza: 400";
+            this.bill="Base Price Of The Pizza: 400";
         }
     }
 
@@ -55,14 +55,14 @@ public class Pizza {
     }
 
     public String getBill(){
-        if(ch==0){
+        if(ch!=0){
             this.bill+="\n"+cheese;
         }
-        if(top==0){
+        if(top!=0){
             this.bill+="\n"+topping;
         }
-        if(take==0){
-            this.bill+="\n"+take;
+        if(take!=0){
+            this.bill+="\n"+takeWay;
         }
         this.bill+="\n"+"Total Price: "+price;
         return this.bill;
